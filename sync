@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# working directory
+cd "$(dirname "$0")"
+
+# sync dotfiles
+cp ./dotfiles/* ~/
+
+# sync vscode settings and install extensions
+cp  ./vscode/settings.json ~/.config/Code/User/
+cp  ./vscode/keybindings.json ~/.config/Code/User/
+cat vs_code_extensions_list.txt | xargs -n 1 code --install-extension
+
+# sync gtk settings
+cp ./gtk/gtk.css ~/.config/gtk-3.0/

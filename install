@@ -3,6 +3,10 @@
 # install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# install color themes
+dnf install dconf uuid
+bash -c  "$(wget -qO- https://git.io/vQgMr)"
+
 # install git
 dnf -y install git
 
