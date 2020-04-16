@@ -1,0 +1,15 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+m",
+        "command": "toggle",
+        "when": "editorTextFocus",
+        "args": {
+            "id": "lineNumbers",
+            "value": [
+                { "editor.lineNumbers": "relative" },
+                { "editor.lineNumbers": "on" }
+            ]
+        }
+    },
+]

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# working directory
+cd "$(dirname "$0")"
+
+# copy dotfiles
+cp ~/.vimrc ./dotfiles
+cp ~/.zshrc ./dotfiles
+
+# copy vscode settings and extensions
+cp ~/.config/Code/User/settings.json ./vscode
+cp ~/.config/Code/User/keybindings.json ./vscode
+code --list-extensions >> ./vscode/vs_code_extensions_list.txt
+
+# copy gtk css settings
+cp ~/.config/gtk-3.0/gtk.css ./gtk
+
