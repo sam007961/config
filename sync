@@ -4,12 +4,14 @@
 cd "$(dirname "$0")"
 
 # sync dotfiles
-cp ./dotfiles/* ~/
+cp -a ./dotfiles/. ~/
 
 # sync vscode settings and install extensions
+mkdir -p ~/.config/Code/User/
 cp  ./vscode/settings.json ~/.config/Code/User/
 cp  ./vscode/keybindings.json ~/.config/Code/User/
-cat vs_code_extensions_list.txt | xargs -n 1 code --install-extension
+cat ./vscode/vs_code_extensions_list.txt | xargs -n 1 code --install-extension
 
 # sync gtk settings
+mkdir -p ~/.config/gtk-3.0/ 
 cp ./gtk/gtk.css ~/.config/gtk-3.0/

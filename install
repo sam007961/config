@@ -1,20 +1,24 @@
 #!/bin/bash
 
 # install Oh My Zsh
+sudo dnf -y install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo usermod --shell /bin/zsh $USER
 
 # install color themes
-dnf install dconf uuid
+sudo dnf -y install dconf uuid
 bash -c  "$(wget -qO- https://git.io/vQgMr)"
 
-# install git
-dnf -y install git
-
 # install vim
-dnf -y install vim
+sudo dnf -y install vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cd ~/.vim/bundle
+git clone git://github.com/altercation/vim-colors-solarized.git
+
 
 # install vscode
-rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-dnf check-update
-dnf -y install code
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+sudo dnf check-update
+sudo dnf -y install code
