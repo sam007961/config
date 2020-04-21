@@ -3,6 +3,9 @@
 # working directory
 cd "$(dirname "$0")"
 
+# configure git credentials store
+git config --global credential.helper store
+
 # sync dotfiles
 cp -a ./dotfiles/. ~/
 

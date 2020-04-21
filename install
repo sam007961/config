@@ -16,6 +16,8 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cd ~/.vim/bundle
 git clone git://github.com/altercation/vim-colors-solarized.git
 
+# install fonts
+sudo dnf install fira-code-fonts
 
 # install vscode
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc

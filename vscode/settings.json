@@ -21,7 +21,7 @@
         "<C-b>": false
     },
     "editor.suggestSelection": "first",
-    "html.mirrorCursorOnMatchingTag": false,
+    "editor.renameOnType": false,
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -30,5 +30,8 @@
     },
     "cmake.configureOnOpen": true,
     "catch2TestExplorer.userId": "389a38845435ab753cf592b7507aafd3ccb459b0",
-    "workbench.activityBar.visible": true
+    "workbench.activityBar.visible": true,
+    "explorer.confirmDragAndDrop": false,
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontLigatures": true
 }
