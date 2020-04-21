@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# update dnf and add rpm fusion
+sudo dnf -y update
+sudo dnf -y install \
+  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf -y install \
+  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 # install Oh My Zsh
 sudo dnf -y install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
