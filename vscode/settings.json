@@ -23,15 +23,17 @@
     "editor.suggestSelection": "first",
     "editor.renameOnType": false,
     "files.exclude": {
+        "**/__pycache__": true,
         "**/.classpath": true,
+        "**/.factorypath": true,
         "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+        "**/.settings": true
     },
     "cmake.configureOnOpen": true,
     "catch2TestExplorer.userId": "389a38845435ab753cf592b7507aafd3ccb459b0",
     "workbench.activityBar.visible": true,
     "explorer.confirmDragAndDrop": false,
     "editor.fontFamily": "'Fira Code'",
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "python.jediEnabled": false,
 }
